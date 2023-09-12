@@ -17,6 +17,7 @@ for num in list:
     dif = abs(x - num)
     if dif < dif_min:
         dif_min = dif
+        print(dif_min)
         num_min = num
 print(list)
-print(num)
+print(num_min)
