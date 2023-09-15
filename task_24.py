@@ -9,10 +9,9 @@ for i in range(N):
     berries =int(input('Введите количество ягод на кусте: '))
     bushes.append(berries)
 
-bushes = [0] + bushes + [0]
+bushes = bushes + [bushes[0]] + [bushes[1]]
 max_collected = 0
-
-for i in range(1, N + 1):
-    collected = bushes[i - 1] + bushes[i] + bushes[i + 1]
+for i in range(1, N):
+    collected = bushes[i] + bushes[i + 1] + bushes[i -1]
     max_collected = max(max_collected, collected)
 print(max_collected)
