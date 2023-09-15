@@ -10,10 +10,8 @@ for i in range(N):
     bushes.append(berries)
 
 bushes = bushes + [bushes[0]] + [bushes[1]]
-print(bushes)
 max_collected = 0
 for i in range(1, N + 1):
     collected = bushes[i] + bushes[i + 1] + bushes[i -1]
-    print(collected)
     max_collected = max(max_collected, collected)
 print(max_collected)
